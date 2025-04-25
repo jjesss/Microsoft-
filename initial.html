@@ -41,8 +41,21 @@
         Screen readers can read hyper links, so dont use 'Click here' or the URL 
         instead link it to words that the link describes more about eg. little penguin, so its clear what someone will learn about if they click the link 
 
-        
+        To suuport these scenarios HTML supports a set of atttributes known as Accessible RIch Internet Applications (ARIA)
+            These allow you to provide additional info to screen readers
 
+                - aria-label: describes the link when the format of the page doesnt allow you
+                - <a href="#" aria-label="Widget description">description</a>
+                - when no semantic equivalent for the widget eg tree:
+                    <h2 id="tree-label">File Viewer</h2>
+                    <div role="tree" aria-labelledby="tree-label">
+                      <div role="treeitem" aria-expanded="false" tabindex="0">Uploads</div>
+                    </div>
+        Images:
+                unable to read whats in an image.
+                'alt' attribute: describe what they are
+                Image purely decorative should have their alt set to empty string alt=""
+                
 
 >>>>>>> jess
     </body>
